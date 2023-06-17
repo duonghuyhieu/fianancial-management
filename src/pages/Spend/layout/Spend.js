@@ -1,8 +1,13 @@
 import React from 'react'
+import AddSpend from '../components/AddSpend'
 
 function Spend() {
   return (
-    <div>Spend</div>
+    <div>
+      <div>Spend</div>
+      <AddSpend />
+    </div>
+    
   )
 }
 

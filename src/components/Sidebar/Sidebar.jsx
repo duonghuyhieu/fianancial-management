@@ -15,13 +15,13 @@ const Sidebar = () => {
           className={`py-2 ${selectedItem === "spend" ? "bg-gray-700" : ""}`}
           onClick={() => handleItemSelected("spend")}
         >
-           <Link to="/">Spend</Link>
+          <Link to="/">Spend</Link>
         </li>
         <li
           className={`py-2 ${selectedItem === "wallet" ? "bg-gray-700" : ""}`}
           onClick={() => handleItemSelected("wallet")}
         >
-           <Link to="/funding">Wallet</Link>
+          <Link to="/funding">Wallet</Link>
         </li>
       </ul>
     </div>

@@ -6,8 +6,8 @@ import Sidebar from './components/Sidebar/Sidebar';
 function App() {
   return (
     <div className='flex'>
-      <Sidebar />
       <Router>
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Spend />} />
           <Route path="/funding" element={<Funding />} />
