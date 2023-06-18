@@ -8,7 +8,7 @@ Modal.setAppElement("#root");
 function AddSpend() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [type, setType] = useState("thu");
+  const [type, setType] = useState("chi");
 
   const openModal = () => {
     setIsOpen(true);
@@ -20,8 +20,9 @@ function AddSpend() {
 
   const handleSubmit = (values) => {
     values.type = type;
-    console.log(values);
-  };
+      console.log(values);
+      closeModal()
+    };
 
   const initialValues = {
     type: "",
@@ -37,7 +38,7 @@ function AddSpend() {
     setType(text);
   };
 
-  const items = ["Chi", "Thu"];
+  const items = ["chi", "thu"];
 
   return (
     <div>
@@ -84,27 +85,31 @@ function AddSpend() {
               ))}
             </div>
 
-            <div>
+            <div className="pt-8 w-full">
               <label htmlFor="date">Ngày</label>
-              <Field type="text" id="date" name="date" />
-              <ErrorMessage name="date" component="div" />
+                <Field     className="w-full mt-2 py-1 px-2 border border-gray-600 rounded transition duration-300 focus:border-blue-500"
+                              type="date" id="date" name="date" />
+                <ErrorMessage name="date" component="div" />
             </div>
 
-            <div>
+            <div className="pt-8 w-full">
               <label htmlFor="account">Nguồn tiền</label>
-              <Field type="text" id="account" name="account" />
+                <Field className="w-full mt-2 py-1 px-2 border border-gray-600 rounded transition duration-300 focus:border-blue-500"
+                        type="text" id="account" name="account" />
               <ErrorMessage name="account" component="div" />
             </div>
 
-            <div>
+            <div className="pt-8 w-full">
               <label htmlFor="typeMoney">Thể loại</label>
-              <Field type="text" id="typeMoney" name="typeMoney" />
+                <Field className="w-full mt-2 py-1 px-2 border border-gray-600 rounded transition duration-300 focus:border-blue-500"
+                    type="text" id="typeMoney" name="typeMoney" />
               <ErrorMessage name="typeMoney" component="div" />
             </div>
 
-            <div>
+            <div className="pt-8 w-full">
               <label htmlFor="money">Số tiền</label>
-              <Field type="text" id="money" name="money" />
+              <Field  className="w-full mt-2 py-1 px-2 border border-gray-600 rounded transition duration-300 focus:border-blue-500"
+               type="number" id="money" name="money" />
               <ErrorMessage name="money" component="div" />
             </div>
 
