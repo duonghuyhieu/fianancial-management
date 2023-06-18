@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Sidebar = () => {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState('spend');
 
   const handleItemSelected = (item) => {
     setSelectedItem(item);
@@ -10,7 +10,7 @@ const Sidebar = () => {
   return (
     <div className="bg-slate-900 h-screen text-white text-center">
       <h1 className="py-8 text-3xl">
-        FINANCIAL <br /> MANAGEMENT
+        QUẢN LÝ <br /> TÀI CHÍNH
       </h1>
       <ul>
         <li
@@ -18,7 +18,7 @@ const Sidebar = () => {
           onClick={() => handleItemSelected("spend")}
         >
           <Link className="px-24 py-2	" to="/">
-            Spend
+            Sổ thu chi
           </Link>
         </li>
         <li
@@ -26,7 +26,7 @@ const Sidebar = () => {
           onClick={() => handleItemSelected("wallet")}
         >
           <Link className="px-24 py-2	" to="/funding">
-            Wallet
+            Ví
           </Link>
         </li>
       </ul>
